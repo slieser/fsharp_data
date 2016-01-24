@@ -1,9 +1,12 @@
 ﻿namespace fsharpdata
 
+open System.Windows.Forms
+
 module demomain =
 
     [<EntryPoint>]
     let main argv = 
-        Demo.plot
+        let chart = Demo.plot("XWD.TO")
+        Application.Run(chart)
         0
 

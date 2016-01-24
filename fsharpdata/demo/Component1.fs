@@ -6,10 +6,10 @@ open FSharp.Data
 type Stocks = CsvProvider<"http://ichart.finance.yahoo.com/table.csv?s=AAPL">
 
 module public Demo =
-    let url = "http://ichart.finance.yahoo.com/table.csv?s=AAPL"
-    let stock = Stocks.Load(url)
+    let public plot symbol = 
+        let url = "http://ichart.finance.yahoo.com/table.csv?s=" + symbol
+        let stock = Stocks.Load(url)
 
-    let public plot = 
-        [ for row in stock.Rows -> row.Date, row.Open ]
-        |> Chart.Line
+        Chart.Line([ for row in stock.Rows -> row.Date, row.Open ], Name = symbol).ShowChart()
+        
  

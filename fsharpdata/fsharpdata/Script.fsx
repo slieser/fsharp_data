@@ -13,10 +13,7 @@ let max = stock.Rows |> Seq.maxBy (fun x -> x.Close)
 
 //stock.Rows |> Seq.iter (fun x -> printfn "%A" x)
 
-#r "../packages/FSharp.Charting.Gtk.0.90.12/lib/net40/OxyPlot.dll"
-#r "../packages/FSharp.Charting.Gtk.0.90.12/lib/net40/OxyPlot.GtkSharp.dll"
-#r "../packages/FSharp.Charting.Gtk.0.90.12/lib/net40/FSharp.Charting.Gtk.dll"
-//#load "../packages/FSharp.Charting.Gtk.0.90.12/FSharp.Charting.Gtk.fsx"
+#load "../packages/FSharp.Charting.0.90.13/FSharp.Charting.fsx"
 
 open FSharp.Charting
 
