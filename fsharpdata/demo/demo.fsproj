@@ -7,7 +7,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>demo</RootNamespace>
     <AssemblyName>demo</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,9 +35,8 @@
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\4.0\Framework\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Component1.fs" />
+    <Compile Include="StockPlotter.fs" />
     <Compile Include="Program.fs" />
-    <Content Include="app.config" />
     <Content Include="packages.config" />
     <Content Include="Google.DataTable.Net.Wrapper.XML" />
   </ItemGroup>
@@ -47,7 +46,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Deedle.RProvider.Plugin">
-      <HintPath>..\packages\Deedle.RPlugin.1.2.4\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
+      <HintPath>..\packages\Deedle.RPlugin.1.0.2\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DynamicInterop">
@@ -63,7 +62,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.3.1.2.5\lib\net40\FSharp.Core.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.15\lib\net40\FSharp.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data">
@@ -75,15 +74,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="HttpClient">
-      <HintPath>..\packages\Http.fs.0.8.0.0\lib\net40\HttpClient.dll</HintPath>
+      <HintPath>..\packages\Http.fs.1.5.1\lib\net40\HttpClient.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MathNet.Numerics">
-      <HintPath>..\packages\MathNet.Numerics.3.10.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <HintPath>..\packages\MathNet.Numerics.3.11.0\lib\net40\MathNet.Numerics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MathNet.Numerics.FSharp">
-      <HintPath>..\packages\MathNet.Numerics.FSharp.3.10.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
+      <HintPath>..\packages\MathNet.Numerics.FSharp.3.11.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -92,23 +91,31 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RDotNet">
-      <HintPath>..\packages\R.NET.Community.1.6.4\lib\net40\RDotNet.dll</HintPath>
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RDotNet.FSharp">
-      <HintPath>..\packages\R.NET.Community.FSharp.1.6.4\lib\net40\RDotNet.FSharp.dll</HintPath>
+      <HintPath>..\packages\R.NET.Community.FSharp.1.6.5\lib\net40\RDotNet.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RDotNet.NativeLibrary">
-      <HintPath>..\packages\R.NET.Community.1.6.4\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
+      <HintPath>..\packages\R.NET.Community.1.6.5\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider">
-      <HintPath>..\packages\RProvider.1.1.15\lib\net40\RProvider.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.15\lib\net40\RProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RProvider.DesignTime">
+      <HintPath>..\packages\RProvider.1.0.15\lib\net40\RProvider.DesignTime.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider.Runtime">
-      <HintPath>..\packages\RProvider.1.1.15\lib\net40\RProvider.Runtime.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.15\lib\net40\RProvider.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RProvider.Server">
+      <HintPath>..\packages\RProvider.1.0.15\lib\net40\RProvider.Server.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

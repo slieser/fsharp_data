@@ -6,7 +6,7 @@ module demomain =
 
     [<EntryPoint>]
     let main argv = 
-        let chart = Demo.plot("XWD.TO")
+        let chart = StockPlotter.Plot("XWD.TO")
         Application.Run(chart)
         0
 

@@ -1,5 +1,4 @@
-﻿System.Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
-#r "../packages/FSharp.Data.2.2.5/lib/net40/FSharp.Data.dll"
+﻿#r "../packages/FSharp.Data.2.2.5/lib/net40/FSharp.Data.dll"
 #load "../packages/FSharp.Charting.0.90.13/FSharp.Charting.fsx"
 open FSharp.Data
 open FSharp.Charting

@@ -1,5 +1,4 @@
-﻿System.Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
-#load "../packages/FsLab.0.3.17/FsLab.fsx"
+﻿#load "../packages/FsLab.0.3.16/FsLab.fsx"
 open FSharp.Data
 open XPlot.GoogleCharts
 

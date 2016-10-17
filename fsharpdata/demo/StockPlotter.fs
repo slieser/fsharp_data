@@ -5,8 +5,8 @@ open FSharp.Data
 
 type Stocks = CsvProvider<"http://ichart.finance.yahoo.com/table.csv?s=AAPL">
 
-module public Demo =
-    let public plot symbol = 
+module public StockPlotter =
+    let public Plot symbol = 
         let url = "http://ichart.finance.yahoo.com/table.csv?s=" + symbol
         let stock = Stocks.Load(url)
 
